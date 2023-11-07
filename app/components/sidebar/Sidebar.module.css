@@ -4,9 +4,10 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     right: 30px;
+    top: 125px;
 }
 
 .link {
@@ -43,12 +44,12 @@
 
 @media (max-width:1035px) {
     .sidebarContainer {
-        top:-100%;
-        transform: translateY(-160%);
-        -webkit-transform: translateY(-160%);
-        -moz-transform: translateY(-160%);
-        -ms-transform: translateY(-160%);
-        -o-transform: translateY(-160%);
+        top: 300px;
+        transform: translateY(50px);
+        -webkit-transform: translateY(50px);
+        -moz-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+        -o-transform: translateY(50px);
 }
 }
 
@@ -57,7 +58,8 @@
       background-color:var(--color-gray-5);
       flex-direction: row;
       bottom: 0;
-      top:100%;
+      top: 80%;
+      /* top:100%; */
       left:0;
       right: 0;
       width: 100%;
