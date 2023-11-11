@@ -1,6 +1,7 @@
 import { Inter, Siemreap } from "next/font/google";
 import "./globals.css";
 import Sidebar from "./components/sidebar/Sidebar";
+import Footer from "./components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
         <div className="container">
           <main>{children}</main>
           <aside><Sidebar /></aside>
+          <Footer/>
         </div>
       </body>
     </html>

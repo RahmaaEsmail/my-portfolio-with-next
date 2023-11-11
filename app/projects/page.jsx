@@ -1,4 +1,10 @@
+import PageTitle from "../components/title/PageTitle";
+
 function ProjectPage() {
-  return <h1>Project Page</h1>;
+  return (
+    <>
+    <PageTitle secondaryTitle="my work" primaryTitle="my portfolio"/>
+    </>
+  );
 }
 export default ProjectPage;

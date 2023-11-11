@@ -225,6 +225,12 @@
 
 }
 
+@media (max-width:550px) {
+    .homeContainer {
+        margin-bottom: 60px;
+    }
+}
+
 @media (max-width:500px) {
   .primaryHeading {
     font-size: 4rem;
@@ -266,11 +272,6 @@
         width: 15px;
         height: 25px;
         padding: 10px 20px;
-        /* border-radius: 20px;
-        -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-        -ms-border-radius: 20px;
-        -o-border-radius: 20px; */
         border-bottom-left-radius: 35px;
         border-top-left-radius: 30px;
 }

@@ -23,16 +23,11 @@ body {
   background-color: var(--background-light-color);
 }
 
-.container {
-  display: flex;
-  align-items: center;
+main {
+  padding-bottom: 20px;
 }
 
-@media (max-width:1035px) {
-  .container {
-    display: block;
-  }
-   
+@media (max-width:1035px) { 
   main {
     padding: 20px;
   }
@@ -42,4 +37,9 @@ body {
   }
 }
 
-
+@media (max-width:550px) {
+  main {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+  }
+}

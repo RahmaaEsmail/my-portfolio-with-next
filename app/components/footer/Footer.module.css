@@ -1,0 +1,30 @@
+.footer {
+    background-color:var(--color-gray-5);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--secondary-light-color);
+}
+
+@media (max-width:550px) {
+    .footer {
+        position: fixed;
+        bottom: 95px;
+        width: 100%;
+        border-bottom: 1px solid var(--color-gray-2);
+    }
+}
+
+@media (max-width:400px) {
+    .footer p{
+       font-size: 1.8rem;
+    }
+}
+
+

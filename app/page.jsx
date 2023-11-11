@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css';
-import { FaDownload, FaGithub, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { FaDownload, FaEnvelope, FaGithub, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
 
 
@@ -20,14 +20,18 @@ function HomePage() {
 
      <div className={styles.socialIconsContainer}>
        <div className={styles.socialIconsBox}>
-         <Link className={styles.icon} href="https://www.linkedin.com/in/rahma-esmail" target="_blank"><FaLinkedinIn/></Link>
+         <a className={styles.icon} href="https://www.linkedin.com/in/rahma-esmail" target="_blank"><FaLinkedinIn/></a>
        </div>
        <div className={styles.socialIconsBox}>
-         <Link className={styles.icon} href="https://github.com/RahmaaEsmail" target="_blank"><FaGithub/></Link>
+         <a className={styles.icon} href="https://github.com/RahmaaEsmail" target="_blank"><FaGithub/></a>
        </div>
        <div className={styles.socialIconsBox}>
-         <Link className={styles.icon} href="https://wa.me/01205930760" target="_blank"><FaWhatsapp/></Link>
+         <a className={styles.icon} href="https://wa.me/01205930760" target="_blank"><FaWhatsapp/></a>
        </div>
+       <div className={styles.socialIconsBox}>
+         <a className={styles.icon} href="mailto:rahmaaesmail26@gmail.com"><FaEnvelope/></a>
+       </div>
+       
      </div>
 
      <div className={styles.resumeBox}>

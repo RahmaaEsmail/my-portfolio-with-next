@@ -1,0 +1,70 @@
+export const skills = [
+    {
+        id:1,
+        name:"HTML5",
+        image:"/assests/html.png"
+    },
+    {
+        id:2,
+        name:"CSS3",
+        image:"/assests/css.png"
+    },
+    {
+        id:3,
+        name:"JavaScript",
+        image:"/assests/js.jpg"
+    },
+    {
+        id:4,
+        name:"JSON",
+        image:"/assests/json.png"
+    },
+    {
+        id:5,
+        name:"Bootstrap",
+        image:"/assests/bootstrap.png"
+    },
+    {
+        id:6,
+        name:"TailwindCSS",
+        image:"/assests/tailwind.svg",
+        type:"svg"
+    },
+    {
+        id:7,
+        name:"React",
+        image:"/assests/react.png",
+    },
+    {
+        id:8,
+        name:"Redux Toolkit",
+        image:"/assests/redux.png",
+    },
+    {
+        id:9,
+        name:"Next",
+        image:"/assests/next.png",
+    },
+    {
+        id:10,
+        name:"Styled Components",
+        image:"/assests/styledc.png",
+    },
+    {
+        id:11,
+        name:"Vite",
+        image:"/assests/vite.png",
+    },
+    {
+        id:12,
+        name:"Figma",
+        image:"/assests/figma.svg",
+        type:"svg"
+    },
+    {
+        id:13,
+        name:"Github & Git",
+        image:"/assests/github.png",
+    },
+   
+]

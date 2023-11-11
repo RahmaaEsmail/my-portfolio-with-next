@@ -34,9 +34,9 @@ function Sidebar() {
   return (
     <div className={styles.sidebarContainer}>
       {links.map((link) => {
-        const Icon = link.label;
         return (
           <Link
+          key={link.label}
             className={`${styles.link} ${
               link.targetSegment === activeSegment ? `${styles.focus}` : ""
             }`}
