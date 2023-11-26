@@ -6,24 +6,29 @@
     align-items: center;
 }
 
-.footer p {
+.footer p ,
+.footer a{
+    text-decoration: none;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.9rem;
     color: var(--secondary-light-color);
+    text-align: center;
 }
+
 
 @media (max-width:550px) {
     .footer {
         position: fixed;
-        bottom: 95px;
+        bottom: 60px;
         width: 100%;
         border-bottom: 1px solid var(--color-gray-2);
     }
 }
 
 @media (max-width:400px) {
-    .footer p{
-       font-size: 1.8rem;
+    .footer p,
+    .footer a{
+       font-size: 1.7rem;
     }
 }
 

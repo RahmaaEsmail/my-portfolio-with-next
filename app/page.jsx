@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import styles from './page.module.css';
 import { FaDownload, FaEnvelope, FaGithub, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
+import SocialIcons from './components/socialIcon/SocialIcons';
 
 
 function HomePage() {
@@ -10,7 +10,7 @@ function HomePage() {
       <div className={`${styles.imgBackground}`}>
         <div className={styles.shape}></div>
         <div className={styles.imageBox}>
-        <Image className={styles.personalImage} src="/IMG-20230629-WA0045.jpg" alt="personal image" width={400} height={500}  />
+        <img className={styles.personalImage} src="/assests/cuteanimated_607.jpg" alt="personal image" />
         </div>
       </div>
       <div className={styles.homeTextContainer}>
@@ -18,28 +18,15 @@ function HomePage() {
       Hi, <span>I'm Rahma Esmail</span>. A Frontend Web Developer.
       </h1>
 
-     <div className={styles.socialIconsContainer}>
-       <div className={styles.socialIconsBox}>
-         <a className={styles.icon} href="https://www.linkedin.com/in/rahma-esmail" target="_blank"><FaLinkedinIn/></a>
-       </div>
-       <div className={styles.socialIconsBox}>
-         <a className={styles.icon} href="https://github.com/RahmaaEsmail" target="_blank"><FaGithub/></a>
-       </div>
-       <div className={styles.socialIconsBox}>
-         <a className={styles.icon} href="https://wa.me/01205930760" target="_blank"><FaWhatsapp/></a>
-       </div>
-       <div className={styles.socialIconsBox}>
-         <a className={styles.icon} href="mailto:rahmaaesmail26@gmail.com"><FaEnvelope/></a>
-       </div>
-       
-     </div>
+     <SocialIcons/>
 
      <div className={styles.resumeBox}>
-       <Link className={styles.resume} rel="noreferrer" href="https://drive.google.com/u/0/uc?id=1lKVt5hiSOQohht4aFLQKXOSdNkTgC6MT&export=download" target='_self' download>
-        <span>Download Cv</span>
-       <span><FaDownload/></span>
+       <Link className={styles.resumeLink} rel="noreferrer" href="https://drive.google.com/u/0/uc?id=1lKVt5hiSOQohht4aFLQKXOSdNkTgC6MT&export=download" target='_top' download>
+        <span className={styles.resumeTxt}>Download Cv</span>
+       <span className={styles.resumeIcon}><FaDownload/></span>
        </Link>
      </div>
+     
       </div>
     </div>
   );

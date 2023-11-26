@@ -5,7 +5,7 @@ import { skills } from "@/public/data/skills";
 
 function AboutPage() {
   return (
-    <div className={styles.aboutContainer}>
+    <div className="container">
       <PageTitle secondaryTitle="My states" primaryTitle={`ABOUT ME`} />
 
       <div className={styles.boxes}>
