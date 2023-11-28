@@ -1,6 +1,6 @@
-import styles from './page.module.css';
-import { FaDownload, FaEnvelope, FaGithub, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
+import { FaDownload} from 'react-icons/fa';
+import styles from './page.module.css';
 import SocialIcons from './components/socialIcon/SocialIcons';
 
 

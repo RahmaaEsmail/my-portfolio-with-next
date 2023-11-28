@@ -134,4 +134,67 @@ export const projects = [
         demo:'https://rahmaaesmail.github.io/Dalail-al-khayrat/',
         github:'https://github.com/RahmaaEsmail/Dalail-al-khayrat.git'
     },
+    {
+        id:16,
+        image:'/assests/travel.png',
+        title:'Travel',
+        description:"A fully responsive landing page.",
+        type:"Pure-HTMl&CSS",
+        demo:'https://rahmaaesmail.github.io/Travel/',
+        github:'https://github.com/RahmaaEsmail/Travel.git'
+    },
+    {
+        id:17,
+        image:'/assests/music-player.png',
+        title:'Music Player',
+        description:" A simple & beautiful HTML5 music player.",
+        type:"vanilla-JS",
+        demo:'https://rahmaaesmail.github.io/music-player/',
+        github:'https://github.com/RahmaaEsmail/music-player.git'
+    },
+    {
+        id:18,
+        image:'/assests/portfolio.png',
+        title:'Portfolio',
+        description:" A full responsive landing page.",
+        type:"Pure-HTMl&CSS",
+        demo:'https://rahmaaesmail.github.io/GDSC-css-project/',
+        github:'https://github.com/RahmaaEsmail/GDSC-css-project.git'
+    },
+    {
+        id:19,
+        image:'/assests/crud.png',
+        title:'Crud',
+        description:"A CRUD is a type of mechanism that allows you to create data, read data, edit it, and delete those data. ",
+        type:"vanilla-JS",
+        demo:'https://rahmaaesmail.github.io/CRUDS/',
+        github:'https://github.com/RahmaaEsmail/CRUDS.git'
+    },
+    {
+        id:20,
+        image:'/assests/appie.png',
+        title:'Appie',
+        description:"A full responsive landing page.",
+        type:"Pure-HTMl&CSS",
+        demo:'https://rahmaaesmail.github.io/Appie/',
+        github:'https://github.com/RahmaaEsmail/Appie.git'
+    },
+    {
+        id:21,
+        image:'/assests/length-converter.png',
+        title:'Length Converter',
+        description:"A full responsive landing page.",
+        type:"vanilla-JS",
+        demo:'https://rahmaaesmail.github.io/length_converter--js/',
+        github:'https://github.com/RahmaaEsmail/length_converter--js.git'
+    },
+    {
+        id:22,
+        image:'/assests/users-list.png',
+        title:'Users List',
+        description:"A simple website built with next.",
+        type:"next",
+        demo:'users-list-with-next-js.vercel.app',
+        github:'https://github.com/RahmaaEsmail/users-list-with-nextJs.git'
+    },
 ]

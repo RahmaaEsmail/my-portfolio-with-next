@@ -1,94 +1,61 @@
-'use client'
+"use client";
+import { useEffect, useState } from "react";
 import { projects } from "@/public/data/projects";
 import PageTitle from "../components/title/PageTitle";
-import styles from './page.module.css';
-import { FaGithub } from "react-icons/fa";
+import styles from "./page.module.css";
 import Search from "../components/search/Search";
-import { useEffect, useState } from "react";
 import Filter from "../components/filter/Filter";
+import NotFound from "../components/notfound/NotFound";
+import ProjectCard from "../components/card/ProjectCard";
 
 function ProjectPage() {
-  const [query,setQuery] = useState("")
-  const [projectsList,setProjectsList] = useState(projects)
-  const [filteredValue , setFilteredValue] = useState("all")
- 
-  useEffect(()=>{
-    if(filteredValue.trim() === 'all') {
-      if(query.length > 1 ) {
-        const searchedProject = projectsList.filter(project => project.title.toLocaleLowerCase().includes(query.toLocaleLowerCase()))
-        setProjectsList(searchedProject)
-      }
-      else {
-        setProjectsList(projects)
-      }
+  const listOfProjects = projects;
+  const [query, setQuery] = useState("");
+  const [filteredValue, setFilteredValue] = useState("all");
+  const [filteredList, setFilteredList] = useState(listOfProjects);
+
+  function handleSearch(list) {
+    if (query.length > 1) {
+      const searchedProject = listOfProjects.filter((project) =>
+        project.title.toLowerCase().includes(query.toLowerCase())
+      );
+      setFilteredList(searchedProject);
+    } else {
+      setFilteredList(list);
     }
+  }
 
-    else {
-      const filteredList = projectsList.filter(project => project.type.trim().toLowerCase() == filteredValue.trim().toLowerCase())
-      if(query.length > 1 ) {
-        const searchedProject = filteredList.filter(project => project.title.toLocaleLowerCase().includes(query.toLocaleLowerCase()))
-        setProjectsList(searchedProject)
-      }
-      else {
-        setProjectsList(filteredList)
-      }
+  useEffect(() => {
+    if (filteredValue !== "all") {
+      const filteredProject = listOfProjects.filter(
+        (project) =>
+          project.type.trim().toLowerCase() ===
+          filteredValue.trim().toLowerCase()
+      );
+      handleSearch(filteredProject);
+    } else {
+      handleSearch(listOfProjects);
     }
-  },[filteredValue,query])
-
-  //  useEffect(() => {
-  //    if(filteredValue.trim().toLocaleLowerCase() === 'all') {
-  //      setProjectsList(projects)
-  //    }else {
-  //     const filteredList = projectsList.filter(project => project.type.trim().toLowerCase() == filteredValue.trim().toLowerCase())
-  //     setProjectsList(filteredList)
-  //    }
-  //  },[filteredValue])
-
-  // useEffect(()=>{
-  //   if(query.length > 1 ) {
-  //     const searchedProject = projectsList.filter(project => project.title.toLocaleLowerCase().includes(query.toLocaleLowerCase()))
-  //     setProjectsList(searchedProject)
-  //   }
-  //   else {
-  //     setProjectsList(projects)
-  //   }
-
-  //   return () => {}
-  // },[query ])
+  }, [query, filteredValue]);
 
   return (
     <div className={styles.projectPage}>
-    <PageTitle secondaryTitle="my work" primaryTitle="my portfolio"/>
+      <PageTitle secondaryTitle="my work" primaryTitle="my portfolio" />
 
-    <div className={styles.searchContainer}>
-      <Search query={query} onChange={setQuery}/>
-      <Filter filteredValue={filteredValue} onChange={setFilteredValue}/>
-    </div>
-
-     {projectsList.length > 0?
-      <div className={styles.projectContainer}>
-       
-      {
-        projectsList.map(project => {
-       return (
-         <div className={styles.card} key={project.id}>
-         <div className={styles.cardImage}>
-           <img src={project.image} alt={project.title} />
-         </div>
-         <div className={styles.cardBody}>
-           <h3>{project.title}</h3>
-           <p>{project.description}</p>
-         </div>
-         <div className={styles.cardFooter}>
-            <a href={project.demo} target="_blank">View Demo</a>
-            <a href={project.github} target="_blank"><FaGithub /></a>
-         </div>
+      <div className={styles.searchContainer}>
+        <Search query={query} onChange={setQuery} />
+        <Filter filteredValue={filteredValue} onChange={setFilteredValue} />
       </div>
-       )
-       })
-      }
-   </div> : <h2 className={styles.notFoundMsg}>No Projects Found , please try again!</h2>}
 
+      {filteredList.length > 0 ? (
+        <div className={styles.projectContainer}>
+          {filteredList.map((project) => {
+            return <ProjectCard project={project} key={project.id} />;
+          })}
+        </div>
+      ) : (
+        <NotFound />
+      )}
     </div>
   );
 }
