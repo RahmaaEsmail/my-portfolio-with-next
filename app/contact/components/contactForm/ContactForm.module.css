@@ -1,0 +1,103 @@
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+}
+
+.inputs input,
+.inputs textarea {
+    padding: 10px 20px;
+    border: 1px solid var(--color-gray-5);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    background-color: var(--color-gray-5);
+    width: 100%;
+    resize: none;
+    font-size: 1.5rem;
+}
+
+.inputs input:focus,
+.inputs textarea:focus {
+    outline: none;
+    border: 1px solid var(--secondary-light-color);
+}
+
+.inputs button {
+    background-color: white;
+}
+
+.inputs textarea {
+    height: 140px;
+}
+
+.buttonBox {
+    margin: 20px 0;
+    display: flex;
+}
+
+.button {
+    padding: 1rem 1.2rem;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border: 1px solid var(--secondary-light-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: var(--secondary-light-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
+.button:hover::before {
+    width: 105%;
+    height: 100%;
+    padding: 1.6rem 0;
+    object-fit: cover;
+}
+
+.buttonTxt {
+    font-size: 1.6rem;
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+}
+
+.buttonIcon {
+    font-size: 1.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+}

@@ -1,0 +1,21 @@
+.select {
+    padding: 1.2rem 1.5rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 1.5px solid var(--main-light-color);
+    color: var(--main-light-color);
+}
+
+.select:focus {
+    outline: none;
+}
+
+
+@media (max-width:480px) {
+    .select {
+        width: 100% !important;
+    }
+}

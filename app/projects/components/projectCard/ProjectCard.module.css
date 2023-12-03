@@ -1,0 +1,98 @@
+.card {
+    background-color: var(--color-gray-5);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding: 10px 10px 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+.cardImage {
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden !important;
+}
+
+
+.cardImage img {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.cardImage:hover img {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.cardBody {
+    padding: 10px 0;
+    color: var(--main-light-color);
+}
+
+.cardBody h3 {
+    font-size: 2rem;
+}
+
+.cardBody p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.cardFooter a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.cardFooter a:first-child {
+    background-color: var(--secondary-light-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.cardFooter a:last-child {
+    font-size: 2.8rem;
+    color: var(--secondary-light-color);
+}
