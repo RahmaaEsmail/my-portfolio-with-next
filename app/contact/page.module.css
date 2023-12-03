@@ -1,7 +1,7 @@
 .contactContainer {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap:20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     max-width: 1000px;
     width: 100%;
     margin: 40px auto;
@@ -9,27 +9,26 @@
 
 .mainTitle {
     margin: 10px 0;
-   font-size: 3rem;
-   color: var(--main-light-color);
+    font-size: 3rem;
+    color: var(--main-light-color);
 }
 
 .list {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap:.7rem;   
+    gap: .7rem;
 }
 
 .listItem {
     display: flex;
     align-items: center;
-    gap:1rem;
+    gap: 1rem;
     font-size: 1.8rem;
 }
 
 .listItem a {
     color: #000;
-    text-decoration: none;
     cursor: pointer;
 }
 

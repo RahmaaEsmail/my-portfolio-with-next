@@ -1,12 +1,12 @@
-import { experiences } from "@/public/data/experience";
-import PageTitle from "../components/title/PageTitle";
 import styles from "./page.module.css";
-import { skills } from "@/public/data/skills";
+import PageHeading from "../components/pageHeading/PageHeading";
+import ExperienceList from "./components/experienceList/ExperienceList";
+import SkillsList from "./components/skillsList/SkillsList";
 
 function AboutPage() {
   return (
-    <div className="container">
-      <PageTitle secondaryTitle="My states" primaryTitle={`ABOUT ME`} />
+    <main className="container">
+      <PageHeading secondaryTitle="My states" primaryTitle={`ABOUT ME`} />
 
       <div className={styles.boxes}>
         <div className={styles.box}>
@@ -36,25 +36,18 @@ function AboutPage() {
 
         <div className={styles.box}>
           <h2 className={styles.aboutBoxTitle}>Experience :</h2>
-          {experiences.map((experience) => {
-            return (
-              <p key={experience.id}>
-                {experience.id}) {experience.experience}, {experience.type},{" "}
-                {experience.date}
-              </p>
-            );
-          })}
+          <ExperienceList />
         </div>
 
         <div className={styles.box}>
           <h2 className={styles.aboutBoxTitle}>Certificates :</h2>
-          <p>1) Route certified Frontend Web Developer</p>
+          <p>1&#41; Route certified Frontend Web Developer</p>
           <p>
-            2) Udemy certified The Ultimate React Course 2023: React, Redux &
-            More
+            2&#41; Udemy certified The Ultimate React Course 2023: React, Redux
+            & More
           </p>
           <p>
-            3) Information Technology Institute (ITI) certified Frontend Web
+            3&#41; Information Technology Institute (ITI) certified Frontend Web
             Developer
           </p>
           <a
@@ -69,23 +62,9 @@ function AboutPage() {
 
       <div className={styles.skillBox}>
         <h2 className={styles.aboutBoxTitle}>My Skills</h2>
-        <div className={styles.skills}>
-          {skills.map((skill) => {
-            return (
-              <div key={skill.id} className={styles.skill}>
-                <div>
-                  <img
-                    className={skill.type ? styles.svgImage : ""}
-                    src={skill.image}
-                  />
-                </div>
-                <h4>{skill.name}</h4>
-              </div>
-            );
-          })}
-        </div>
+        <SkillsList />
       </div>
-    </div>
+    </main>
   );
 }
 export default AboutPage;

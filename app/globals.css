@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -6,13 +6,13 @@
 
 :root {
   --background-light-color: white;
-    --secondary-light-color: #F56692;
-    --main-light-color: #454e56;
-    --color-gray-2: #6c7983;
-    --color-gray-4: #454e56;
-    --color-gray-5: #f8f8f8;
-    --white-color:white;
-    --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
+  --secondary-light-color: #F56692;
+  --main-light-color: #454e56;
+  --color-gray-2: #6c7983;
+  --color-gray-4: #454e56;
+  --color-gray-5: #f8f8f8;
+  --white-color: white;
+  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
 }
 
 html {
@@ -21,6 +21,7 @@ html {
 
 body {
   background-color: var(--background-light-color);
+  min-height: 100dvh;
 }
 
 main {
@@ -29,14 +30,14 @@ main {
 
 .container {
   display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 6rem;
-    width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6rem;
+  width: 100%;
 }
 
 
-@media (max-width:1035px) { 
+@media (max-width:1035px) {
   main {
     padding: 20px;
   }

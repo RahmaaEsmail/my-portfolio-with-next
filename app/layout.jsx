@@ -1,4 +1,3 @@
-// 'use client'
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "./components/sidebar/Sidebar";
@@ -18,29 +17,25 @@ export default function RootLayout({ children }) {
       <head>
         <link
           rel="icon"
-          href="/assests/personal-image.jpg"
+          href="/assests/logo/logo.jpg"
           type="image/jpg"
           sizes="any"
         />
       </head>
       <body className={inter.className}>
-        <div>
-          <Toaster
-            position="top-center"
-            reverseOrder={false}
-            toastOptions={{
-              style: {
-                fontSize: "19px",
-                padding: "9px",
-              },
-            }}
-          />
-          <main>{children}</main>
-          <aside>
-            <Sidebar />
-          </aside>
-          <Footer />
-        </div>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            style: {
+              fontSize: "19px",
+              padding: "9px",
+            },
+          }}
+        />
+        {children}
+        <Sidebar />
+        <Footer />
       </body>
     </html>
   );

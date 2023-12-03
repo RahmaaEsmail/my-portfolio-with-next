@@ -37,6 +37,6 @@
 @media (max-width:480px) {
     .searchContainer {
        flex-direction: column;
-       gap:1.3rem
+       gap:1.3rem;
     }
 }

@@ -1,34 +1,40 @@
-import Link from 'next/link';
-import { FaDownload} from 'react-icons/fa';
-import styles from './page.module.css';
-import SocialIcons from './components/socialIcon/SocialIcons';
-
+import { FaDownload } from "react-icons/fa";
+import styles from "./page.module.css";
+import SocialIcons from "./components/socialIcons/SocialIcons";
+import Image from "next/image";
 
 function HomePage() {
   return (
-    <div className={`${styles.homeContainer}`}>
+    <main className={`${styles.homeContainer}`}>
       <div className={`${styles.imgBackground}`}>
         <div className={styles.shape}></div>
         <div className={styles.imageBox}>
-        <img className={styles.personalImage} src="/assests/cuteanimated_607.jpg" alt="personal image" />
+          <Image
+            className={styles.personalImage}
+            src="/assests/home/homeImage.jpg"
+            alt="personal image"
+            width={350}
+            height={500}
+          />
         </div>
       </div>
       <div className={styles.homeTextContainer}>
         <h1 className={styles.primaryHeading}>
-      Hi, <span>I'm Rahma Esmail</span>. A Frontend Web Developer.
-      </h1>
+          Hi, <span>I'm Rahma Esmail</span>. A Frontend Web Developer.
+        </h1>
 
-     <SocialIcons/>
+        <SocialIcons />
 
-     <div className={styles.resumeBox}>
-       <Link className={styles.resumeLink} rel="noreferrer" href="https://drive.google.com/u/0/uc?id=1lKVt5hiSOQohht4aFLQKXOSdNkTgC6MT&export=download" target='_top' download>
-        <span className={styles.resumeTxt}>Download Cv</span>
-       <span className={styles.resumeIcon}><FaDownload/></span>
-       </Link>
-     </div>
-     
+        <div className={styles.buttonBox}>
+          <button className={styles.button}>
+            <span className={styles.buttonTxt}>Download CV</span>
+            <span className={styles.buttonIcon}>
+              <FaDownload />
+            </span>
+          </button>
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
 export default HomePage;

@@ -1,13 +1,13 @@
-'use client'
+"use client";
 import styles from "./page.module.css";
-import SocialIcons from "../components/socialIcon/SocialIcons";
-import PageTitle from "../components/title/PageTitle";
-import Form from "../components/form/Form";
+import SocialIcons from "../components/socialIcons/SocialIcons";
+import Form from "./components/contactForm/ContactForm";
+import PageHeading from "../components/pageHeading/PageHeading";
 
 function ContactPage() {
   return (
-    <div className="container">
-      <PageTitle secondaryTitle="contact" primaryTitle="contact me" />
+    <main className="container">
+      <PageHeading secondaryTitle="contact" primaryTitle="contact me" />
       <div className={styles.contactContainer}>
         <ul className={styles.list}>
           <h3 className={styles.mainTitle}>CONTACT ME HERE</h3>
@@ -32,9 +32,9 @@ function ContactPage() {
 
           <SocialIcons />
         </ul>
-        <Form/>
+        <Form />
       </div>
-    </div>
+    </main>
   );
 }
 export default ContactPage;

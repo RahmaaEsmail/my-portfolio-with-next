@@ -6,7 +6,7 @@ import SidebarDynamicIcon from "./SidebarDynamicIcon";
 
 function Sidebar() {
   const activeSegment = useSelectedLayoutSegment();
-  
+
   const links = [
     {
       label: "FaHome",
@@ -29,24 +29,23 @@ function Sidebar() {
       targetSegment: "contact",
     },
   ];
- 
 
   return (
-    <div className={styles.sidebarContainer}>
+    <aside className={styles.sidebarContainer}>
       {links.map((link) => {
         return (
           <Link
-          key={link.label}
+            key={link.label}
             className={`${styles.link} ${
               link.targetSegment === activeSegment ? `${styles.focus}` : ""
             }`}
             href={link.path}
           >
-            <SidebarDynamicIcon  type={link.label} />
+            <SidebarDynamicIcon type={link.label} />
           </Link>
         );
       })}
-    </div>
+    </aside>
   );
 }
 
