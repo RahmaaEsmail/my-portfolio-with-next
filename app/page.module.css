@@ -95,6 +95,7 @@
     height: 40px;
     overflow: hidden;
     background-color: white;
+    color:var(--main-light-color)
 }
 
 .button::before {

@@ -3,6 +3,8 @@ import styles from "./page.module.css";
 import SocialIcons from "./components/socialIcons/SocialIcons";
 import Image from "next/image";
 
+const FILE_NAME = "12TqVhhPcdom5TVNQ3K2_PSRdwSzAvLJg";
+
 function HomePage() {
   return (
     <main className={`${styles.homeContainer}`}>
@@ -26,12 +28,18 @@ function HomePage() {
         <SocialIcons />
 
         <div className={styles.buttonBox}>
-          <button className={styles.button}>
+          <a
+            href={`https://drive.google.com/u/1/uc?id=${FILE_NAME}&export=download`}
+            rel="noreferrer"
+            download
+            target="_self"
+            className={styles.button}
+          >
             <span className={styles.buttonTxt}>Download CV</span>
             <span className={styles.buttonIcon}>
               <FaDownload />
             </span>
-          </button>
+          </a>
         </div>
       </div>
     </main>
