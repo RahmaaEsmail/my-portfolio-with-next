@@ -65,7 +65,7 @@ function Form() {
         <textarea
           placeholder="Your Message"
           value={formData.message}
-          onChange={(e) => handleChange(2)}
+          onChange={(e) => handleChange(e)}
           name="message"
           required
         ></textarea>
