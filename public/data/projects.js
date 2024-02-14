@@ -194,7 +194,16 @@ export const projects = [
         title: 'Users List',
         description: "A simple website built with next.",
         type: "next",
-        demo: 'users-list-with-next-js.vercel.app',
+        demo: 'https://users-list-with-next-js.vercel.app/',
         github: 'https://github.com/RahmaaEsmail/users-list-with-nextJs.git'
+    },
+    {
+        id: 23,
+        image: '/assests/projects/my-portfolio.png',
+        title: 'My Portfolio',
+        description: "A portfolio website created with react.js, where I display my details, skills, projects and contact info",
+        type: "next",
+        demo: 'https://my-portfolio-with-next-ap18.vercel.app/',
+        github: 'https://github.com/RahmaaEsmail/my-portfolio-with-next.git'
     },
 ]
