@@ -206,4 +206,13 @@ export const projects = [
         demo: 'https://my-portfolio-with-next-ap18.vercel.app/',
         github: 'https://github.com/RahmaaEsmail/my-portfolio-with-next.git'
     },
+    {
+        id: 24,
+        image: '/assests/projects/UMQ.png',
+        title: 'UMQ',
+        description: "The website is a freelance project ,I created for a cleaning company using React offers the capability to switch between two languages.",
+        type: "react",
+        demo: 'https://umq.onrender.com/',
+        github: 'https://github.com/RahmaaEsmail/UMQ.git'
+    },
 ]
